@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Machine Learning </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+ <!--CSS Link-->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- start of header -->
+  <div>
+    <div class="row">
+      <div class="col col-6 homebtn">
+        <a href="index.html">Movies</a>
+      </div>
+      <div class="col col-6 menubuttons divtop">
+
+
+        <nav class="navbar navbar-expand-md navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Machine Learning Models
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="random_forest.html">Random Forest </a>
+                  <a class="dropdown-item" href="logistic_regression.html">Logistic Regression</a>
+                  <a class="dropdown-item" href="svm.html">Support Vector Machine</a>
+                  <a class="dropdown-item" href="knn.html">K Nearest Neighbors</a>
+                  <a class="dropdown-item" href="neural_networks.html">Neural Networks</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="comparison.html">Comparison</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="etl.html">ETL</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- start of main body -->
+  <div class="container">
+    <br>
+    <div class="row">
+      <!-- left side begins -->
+      <div class="col col-12 col-md-12 divbdy">
+        <br>
+        <h1> Neural Networks</h1>
+        <hr>
+        <a href="neural_networks.html"><img class="img-fluid" src="Images/neural_networks.png" 
+          class="img-thumbnail" alt="Neural Networks" width="780" align="center"></a>
+           <br> <br>
+        <p>
+          <strong> Machine Learning Model -  Neural Networks </strong>
+          <br> <br>
+          A neural net consists of many different layers of neurons, with each layer 
+          receiving inputs from previous layers, and passing outputs to further layers. <br>
+          The way each layer output becomes the input for the next layer depends on the 
+          weight given to that specific link, which depends on the cost function, 
+          and the optimizer. <br> The neural net iterates for a predetermined number of 
+          iterations, called epochs. After each epoch, the cost function is analyzed to 
+          see where the model could be improved. <br> The optimizing function then alters the 
+          internal mechanics of the network, such as the weights, and the biases, 
+          based on the information provided by the cost function, until the cost function is minimized.
+
+
+          
+          <br>
+          <p>
+            When categorizing the movie data using ratingInter, which had 8 options, 
+            the model had the following accuracy scores:
+             <br> 
+            <br>
+            <strong>   Accuracy with one hidden layer:  </strong>
+              <br> 
+              937/937 - 0s - loss: 1.1234 - acc: 0.5496  <br>
+              Normal Neural Network - Loss: 1.1233897466160827, Accuracy: 0.5496264696121216 <br>
+              <br>
+              <strong>  Accuracy with two hidden layers:  </strong>
+              <br> 
+              937/937 - 0s - loss: 1.3102 - acc: 0.5358  <br>
+              Normal Neural Network - Loss: 1.310229677909721, Accuracy: 0.5357524156570435 <br> <br>
+
+              For Neural Network we applied ratingInteger in place of performance. <br>
+              Both ratingInterger and performance have a high relationship and 
+              we can’t use both in the same model. 
+              <br>
+              We applied ratingInteger in KNN so that we can compare with Neural Network and the latter had a higher score. 
+              <br>
+              We also found out that two hidden layers in Neural Network had a lower score 
+              than one hidden layer, therefore it’s advisable to apply one hidden layer. <br>
+              However, the score for two hidden layer seem to be improving the more times we run the model. <br>
+              Initially it had accuracy of 0.51 but after running the model several times accuracy increased to 0.53.
+
+
+
+          </p>
+        </p>
+        <hr>
+      </div>
+     
+    </div>
+  </div>
+ 
+</body>
+
+</html>

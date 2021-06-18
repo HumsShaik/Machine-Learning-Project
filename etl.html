@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data </title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+          crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div>
+        <div class="row">
+          <div class="col col-6 homebtn">
+            <a href="index.html">Movies</a>
+          </div>
+          <div class="col col-6 menubuttons divtop">
+    
+    
+            <nav class="navbar navbar-expand-md navbar-light">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                      data-target="#navbarTogglerDemo03"  aria-controls="navbarTogglerDemo03" 
+                      aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" 
+                       data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+                      Machine Learning Models
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="random_forest.html">Random Forest</a>
+                        <a class="dropdown-item" href="logistic_regression.html">Logistic Regression</a>
+                        <a class="dropdown-item" href="svm.html">Support Vector Machine</a>
+                        <a class="dropdown-item" href="knn.html">K Nearest Neighbors</a>
+                        <a class="dropdown-item" href="neural_networks.html">Neural Networks</a>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="comparison.html">Comparison</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="etl.html">ETL</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+    
+    
+          </div>
+        </div>
+      </div>
+
+   
+<!-- start of main body -->
+<div class="container">
+    <br>
+    <div class="row">
+     
+      <div class="col col-12 col-md-12 divbdy">
+        <br>
+        <h1>ETL</h1>
+        <hr>
+        <a href="etl.html">
+          <img class="img-fluid" src="Images/etl.png" 
+            class="img-thumbnail" alt="ETL" width="280" align="left"></a>
+
+        <p>
+          
+          <br>
+         <strong>  Extract  </strong>
+         The data set that we obtained was a CSV file from Kaggle.
+          (https://www.kaggle.com/gabrielegalimberti/movies-example-for-machine-learning-activities?select=MACHINE_LEARNING_FINAL.csv). 
+          
+          <a href='https://www.kaggle.com/gabrielegalimberti/movies-example-for-machine-learning-activities?select=MACHINE_LEARNING_FINAL.csv'></a>
+
+          <br>
+          <p>          
+          
+          <Strong> Transform </Strong>
+          <br>
+         To ready the data for analysis, we needed to ensure all of the data was consistent across all fields. 
+         We found 2 rows that had misaligned data, so we removed all rows that had  “Karate Kid” in the 
+         title which removed a total of 4 rows. <br>
+
+         We then created a column for movie performance of success or fail: if the rating integer score 
+         was greater than 7, the movie was considered a success, else it was considered a failure. <br>
+         <p>
+        <strong> Load </strong> 
+        The cleaned data was uploaded into a new CSV file titled clean_movies.csv.
+
+        <p>
+          <strong> 
+            References/Credits
+          </strong>
+          <br>
+           The websites we took References from are : <br>
+
+           https://machinelearningmastery.com/logistic-regression-for-machine-learning/  
+           
+           <br>
+          
+           https://scikit-learn.org/stable/modules/neighbors.html#nearest-neighbors-classification
+
+           <br>
+
+           https://www.datacamp.com/community/tutorials/random-forests-classifier
+
+           <br>
+
+           https://www.datacamp.com/community/tutorials/svm-classification-scikit-learn-python
+
+           <br>
+
+           https://towardsdatascience.com/classification-using-neural-networks-b8e98f3a904f
+
+           <br>
+
+
+
+        </p>
+        </p>
+        </p> 
+        </p>
+        <hr>
+      </div>
+      
+     
+    </div>
+  </div>
+  
+</body>
+
+</html>

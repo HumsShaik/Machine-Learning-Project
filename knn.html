@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Visualization </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+ 
+ 
+ <!--CSS Link-->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- start of header -->
+  <div>
+    <div class="row">
+      <div class="col col-6 homebtn">
+        <a href="index.html">Movies</a>
+      </div>
+      <div class="col col-6 menubuttons divtop">
+
+
+        <nav class="navbar navbar-expand-md navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Machine Learning Models
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="random_forest.html">Random Forest
+                  </a>
+                  <a class="dropdown-item" href="logistic_regression.html">Logistic Regression</a>
+                  <a class="dropdown-item" href="svm.html">Support Vector Machine</a>
+                  <a class="dropdown-item" href="knn.html">K Nearest Neighbors</a>
+                  <a class="dropdown-item" href="neural_networks.html">Neural Networks</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="comparison.html">Comparison</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="etl.html">ETL</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- start of main body -->
+  <div class="container">
+    <br>
+    <div class="row">
+     
+      <div class="col col-12 col-md-12 divbdy">
+        <br>
+        <h1> K Nearest Neighbors</h1>
+        <hr>
+        <a href="knn.html"><img class="img-fluid" src="Images/knn_1.png" 
+          class="img-thumbnail" alt="K Nearest Neighbors" width="380" align="center"></a>
+          <br> <br>
+        <p>
+          <strong> Machine Learning Model - K Nearest Neighbor
+          </strong>
+          <br>
+          The KNeighborsClassifier model tries to categorize data by assigning it to a data class 
+          which is most similar to the data points nearest to it. The k value is manually selected 
+          by the programmer to optimize the model and can vary depending on the data set used. 
+          Typically, a larger k value will decrease the effects of noise, but the boundaries of 
+          the classifications are not as distinct, so it is a balancing act when trying to determine 
+          which is the best value to use. 
+          
+            <br>
+          <p>
+
+            <a href="knn.html"><img class="img-fluid" src="Images/KNN_predict-vs-actual.png" 
+              class="img-thumbnail" alt="K Nearest Neighbors" width="160" align="left"></a>
+              <br>
+            The k values represent the number of neighbor values that are compared and a simple majority 
+            of like type datapoints is used to classify the datapoint being reviewed. <br>
+            For our models, the k values were selected by reviewing a matplotlib graph of the k values and training 
+            accuracy scores and finding the lowest value where the data appears to stabilize.
+
+          <br> <br>
+          
+          <br>
+          
+
+            
+            <Strong> Results : </Strong> <br>
+
+            0 = Fail <br>
+            1 = Success <br> <br> <br> <br>
+
+            <a href="knn.html"><img class="img-fluid" src="Images/KNN.png" 
+              class="img-thumbnail" alt="K Nearest Neighbors" width="380" align="left"></a>
+                <br>
+
+          When categorizing the movie data into success/failure categories, the model had the 
+          following accuracy scores:
+          <br>
+          k=17  <strong> Train Accuracy:  </strong> 0.843
+          <br>
+          k=17 <strong>  Test Accuracy:  </strong> 0.840
+          <br> <br>
+          This model has an 84% accuracy, but it under-predicts the success of the movie meaning it 
+          predicts a fail when it actually has a score that indicates a successful movie. 
+          This means that a movie fanatic may not watch a movie thinking it will be bad, 
+          but may then miss out on watching something they would actually have enjoyed. <br> <br> 
+
+          <a href="knn.html"><img class="img-fluid" src="Images/KNN_FineTuning.png " 
+            class="img-thumbnail" alt="K Nearest Neighbors" width="420" align="left"></a>
+           <br> <br>
+            When trying to find which data points had more impact on the model categorizing into success/failure, 
+            removing the columns that indicated that genre of movie improved the model and had the following 
+            accuracy scores:
+            <br> <br>
+            k=13  <strong> Train Accuracy:  </strong> 0.879 <br>
+            k=13 <strong>  Test Accuracy:  </strong> 0.884 <br> <br> <br> <br> <br> <br>
+
+            <a href="knn.html"><img class="img-fluid" src="Images/KNN_Ratings.png " 
+              class="img-thumbnail" alt="K Nearest Neighbors" width="420" align="left"></a>
+               <br> <br>
+            When categorizing the data into the integer rating scores from 2-9, the model had the 
+            following accuracy scores:<br> <br>
+            k=23  <strong> Train Accuracy:  </strong> 0.506 <br>
+            k=23  <strong>  Test Accuracy:  </strong> 0.456 <br>
+
+            <br>
+            
+  
+           
+            This shows that the model is able to better categorize the data into two separate groups instead of 
+            splitting the data into 8 separate groups.
+
+
+
+
+
+            
+
+
+
+
+        </p>
+      </p>
+        <hr>
+      </div>
+      
+
+     
+    </div>
+  </div>
+   
+</body>
+
+</html>
